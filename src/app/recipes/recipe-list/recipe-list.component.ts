@@ -13,6 +13,16 @@ export class RecipeListComponent implements OnInit {
       'Legendary tasty soup that have magic effect.',
       'https://static.vecteezy.com/system/resources/previews/000/729/572/large_2x/borsh-russian-traditional-dish-photo.jpg'
     ),
+    new Recipe(
+      'Borscht',
+      'Legendary tasty soup that have magic effect.',
+      'https://static.vecteezy.com/system/resources/previews/000/729/572/large_2x/borsh-russian-traditional-dish-photo.jpg'
+    ),
+    new Recipe(
+      'Borscht',
+      'Legendary tasty soup that have magic effect.',
+      'https://static.vecteezy.com/system/resources/previews/000/729/572/large_2x/borsh-russian-traditional-dish-photo.jpg'
+    ),
   ];
 
   constructor() {
