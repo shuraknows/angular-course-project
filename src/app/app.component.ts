@@ -10,8 +10,5 @@ export class AppComponent {
 
   onSectionSelected(section: string) {
     this.activeSection = section;
-
-    console.log('active section');
-    console.log(this.activeSection);
   }
 }
