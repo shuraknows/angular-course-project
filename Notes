@@ -1,1 +1,16 @@
 ng g component recipes --skip-tests
+
+
+++++ Directives ++++
+
+
+* Attribute directives
+Look like a normal HTML attribute. They affect the element they are added to.
+Only affect the element they are added to.
+
+* Structural directives
+ Look like a normal HTML attribute but have a leading *.
+ They shape or reshape the DOM's structure, by adding, removing, and manipulating elements.
+
+
+
