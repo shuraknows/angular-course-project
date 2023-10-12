@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
 
 @Component({
@@ -7,6 +7,8 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
+  @Output() recipeSelected = new EventEmitter<Recipe>()
+
   recipes: Recipe[] = [
     new Recipe(
       'Borscht',
@@ -14,13 +16,13 @@ export class RecipeListComponent implements OnInit {
       'https://static.vecteezy.com/system/resources/previews/000/729/572/large_2x/borsh-russian-traditional-dish-photo.jpg'
     ),
     new Recipe(
-      'Borscht',
-      'Legendary tasty soup that have magic effect.',
+      'Borscht 2',
+      'Legendary tasty soup that have magic effect. 2',
       'https://static.vecteezy.com/system/resources/previews/000/729/572/large_2x/borsh-russian-traditional-dish-photo.jpg'
     ),
     new Recipe(
-      'Borscht',
-      'Legendary tasty soup that have magic effect.',
+      'Borscht 3',
+      'Legendary tasty soup that have magic effect. 3',
       'https://static.vecteezy.com/system/resources/previews/000/729/572/large_2x/borsh-russian-traditional-dish-photo.jpg'
     ),
   ];
@@ -30,4 +32,8 @@ export class RecipeListComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  onRecipeSelected(recipe: Recipe) {
+    this.recipeSelected.emit(recipe)
+  }
 }
